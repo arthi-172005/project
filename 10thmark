@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10th MARK ENTRY</title>
+    
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        h2{
+            color: red;
+            
+        }
+
+        .container{
+            width: 400px;
+            margin: auto;
+            border: 8px solid #333;
+            padding: 15px;
+            box-shadow: 6px 6px 10px gray;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+
+        th,td{
+            border: 2px solid black;
+            padding: 10px;
+            
+        }
+        th{
+            text-align: center;
+        }
+
+        input{
+            width: 90%;
+            padding: 6px;
+            
+        }
+
+        button{
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .result{
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        
+    </style>
+
+    <script>
+        function calculate(){
+            let t = Number(document.getElementById("tamil").value);
+            let e = Number(document.getElementById("english").value);
+            let m = Number(document.getElementById("mathematics").value);
+            let s = Number(document.getElementById("science").value);
+            let ss = Number(document.getElementById("social science").value);
+
+            let total=t+e+m+s+ss;
+            let avg=total/5;
+
+            document.getElementById("total").innerHTML="Total:"+total;
+            document.getElementById("average").innerHTML="Average :"+avg;
+        }
+    </script>
+    </head>
+
+    <body>
+        <h2>ENTER 10th MARK HERE</h2>
+
+        <div class="container">
+            <table>
+                <tr>
+                    <th>SUBJECT</th>
+                    <th>MARK</th>
+                </tr>
+
+                <tr>
+                    <td>TAMIL</td>
+                    <td><input type="number" id="tamil"></td>
+                </tr>
+
+                
+                <tr>
+                    <td>ENGLISH</td>
+                    <td><input type="number" id="english"></td>
+                </tr>
+
+                
+                <tr>
+                    <td>MATHEMATICS</td>
+                    <td><input type="number" id="maths"></td>
+                </tr>
+
+                
+                <tr>
+                    <td>SCIENCE</td>
+                    <td><input type="number" id="science"></td>
+                </tr>
+
+                
+                <tr>
+                    <td>SOCIAL SCIENCE</td>
+                    <td><input type="number" id="social"></td>
+                </tr>
+            </table>
+
+            <button onclick="calculate()">Calculate</button>
+        
+        <div class="result">
+            <p id="total"></p>
+            <p id="average"></p>
+        </div>
+        </div>
+
+    </body>
+</html>
